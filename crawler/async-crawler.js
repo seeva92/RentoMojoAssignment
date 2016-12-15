@@ -45,7 +45,7 @@ module.exports = function crawler(){
         if(str == null) return null;
         try{
             //Removing the fragments in the url
-            str = normalizeUrl(str,{stripFragment: true, stripWWW: true, removeTrailingSlash: false,removeQueryParameters: ['source','redirect']});
+            str = normalizeUrl(str,{stripFragment: true, stripWWW: true, removeTrailingSlash: false,removeQueryParameters: ['source','redirect','gi']});
         }catch(e){
             return null;
         }
