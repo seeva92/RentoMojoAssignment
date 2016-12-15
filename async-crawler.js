@@ -164,7 +164,7 @@ module.exports = function crawler(){
     };
 
     //Async queue with two concurrent workers
-    _this.crawlingQueue = Async.queue(_this.crawlUrl,100);
+    _this.crawlingQueue = Async.queue(_this.crawlUrl,5);
 
     _this.crawlingQueue.empty = function(){
         console.log("It is empty");
